@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3 product-card">
+                <div class="product-img">
+                    <img src="{{item.image}}" alt="" srcset="">
+                </div>
+                <div class="item-det">
+                <h5>{{item.title}}</h5>
+                <div class="d-flex  justify-content-between">
+                    <p>${{item.price}}</p>
+                    <p>{{item.rating.rate}}<span>({{item.rating.count}} Reviews)</span></p>
+                </div>
+                <div class="product-actions d-flex">
+                    <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
+                    
+
+                </div>
+                </div>
+                
+            </div>
+           
+
+        </ng-container> 
+    </div>
+</div>

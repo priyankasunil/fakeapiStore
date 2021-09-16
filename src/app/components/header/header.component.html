@@ -1,0 +1,39 @@
+<header>
+    <div class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <div class="navbar-brand align-item-center d-flex">
+                <h2><strong><i>Fake</i></strong><i> Store</i></h2>
+            </div>
+            <div class="actions">
+                
+                    <div *ngIf="(afAuth.user | async) else logoutBlock ">
+                        <button mat-raised-button color="primary" (click)="logout()">
+                            Log out
+                        </button>
+                    </div>
+                    <ng-template #logoutBlock>
+                        <button mat-raised-button color="primary" routerLink="/signup">
+                            Signup
+                        </button>
+                        <button mat-raised-button color="primary" routerLink="/login">
+                            Login
+                        </button>
+                    </ng-template>
+                <button routerLink="/cart" class="btn btn-primary">
+                    Cart
+                    <div style="font-size: 12px;" class="badge bg-danger">{{totalItem}}</div>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+
+

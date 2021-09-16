@@ -1,0 +1,11 @@
+.navbar-brand h2 {
+    font-size:30px;
+    color:#fff;
+}
+
+.actions button{
+    margin:5px;
+}
+.actions{
+    display: flex;
+}
